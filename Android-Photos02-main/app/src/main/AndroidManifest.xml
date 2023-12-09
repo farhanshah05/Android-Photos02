@@ -22,5 +22,4 @@
         <activity android:name=".SingleImageActivity" />
         <activity android:name=".SlideshowActivity"></activity>
     </application>
-
 </manifest>

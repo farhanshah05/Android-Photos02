@@ -2,52 +2,33 @@ package model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Album implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * Name of the album
-     */
     public String albumName;
-
-    /**
-     * List of photos in an album
-     */
-    public ArrayList<Photo> photos;
-
-    /**
-     * Current photo
-     */
+    public List<Photo> photos;
     public Photo currentPhoto;
 
-    /**
-     * Number of photos in an album
-     */
-    public int numberOfPhotos;
-
-    public Album(String albumName){
+    public Album(String albumName) {
         this.albumName = albumName;
-        photos = new ArrayList<Photo>();
+        this.photos = new ArrayList<>();
     }
 
-    public void addPhoto(String filepath){
+    public void addPhoto(String filepath) {
         Photo photo = new Photo(filepath);
         photos.add(photo);
-        numberOfPhotos++;
     }
 
-    public void addPhoto(Photo photo){
+    public void addPhoto(Photo photo) {
         photos.add(photo);
-        numberOfPhotos++;
     }
 
-    public void deletePhoto(int index){
+    public void deletePhoto(int index) {
         photos.remove(index);
-        numberOfPhotos--;
     }
-
 
     public String getAlbumName() {
         return albumName;
@@ -57,7 +38,7 @@ public class Album implements Serializable {
         this.albumName = albumName;
     }
 
-    public ArrayList<Photo> getPhotos() {
+    public List<Photo> getPhotos() {
         return photos;
     }
 
@@ -70,7 +51,6 @@ public class Album implements Serializable {
     }
 
     public int getNumberOfPhotos() {
-        return numberOfPhotos;
+        return photos.size();
     }
-
 }

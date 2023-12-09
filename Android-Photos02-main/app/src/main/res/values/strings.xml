@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CS213 Android Project</string>
+    <string name="app_name">Android-Photos02</string>
 
 
     <string-array name="photo_functions">
