@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Android-Photos02</string>
+
+
+    <string-array name="photo_functions">
+        <item>Delete Photo</item>
+        <item>Move Photo</item>
+    </string-array>
+
+    <string-array name="tag_functions">
+        <item>Person</item>
+        <item>Location</item>
+    </string-array>
+
+
+</resources>
